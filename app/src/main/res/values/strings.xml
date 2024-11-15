@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="sign_up">Don\'t have an account? <b>Sign Up</b></string>
+    <string name="edit"><u>Chinh sua</u></string>
+    <string name="delete"><u>Xoa</u></string>
+</resources>
