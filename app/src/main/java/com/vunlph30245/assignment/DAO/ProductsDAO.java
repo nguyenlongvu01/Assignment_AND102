@@ -1,5 +1,6 @@
 package com.vunlph30245.assignment.DAO;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -23,9 +24,39 @@ public class ProductsDAO {
             cursor.moveToFirst();
 
             do {
-                list.add(new Products(cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getInt(3)));
+                list.add(new Products(cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getInt(3), cursor.getString(4)));
             } while (cursor.moveToNext());
         }
         return list;
+    }
+    public boolean themSP(Products products){
+        SQLiteDatabase sqlitedatabase = dbHelper.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("tensp", products.getTensp());
+        values.put("gia", products.getGia());
+        values.put("soluong", products.getSoluong());
+        values.put("img", products.getImg());
+
+        long check = sqlitedatabase.insert("PRODUCTS", null, values);
+        return check != -1;
+
+    }
+
+    public boolean insertSP(Products products){
+        SQLiteDatabase sqlitedatabase = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("tensp", products.getTensp());
+        values.put("gia", products.getGia());
+        values.put("soluong", products.getSoluong());
+        int check = sqlitedatabase.update("PRODUCTS", values, "masp = ?", new String[]{String.valueOf(products.getMasp())});
+        return check != -1;
+    }
+
+    public boolean deleteSP(int masp){
+        SQLiteDatabase sqlitedatabase = dbHelper.getWritableDatabase();
+        int check = sqlitedatabase.delete("PRODUCTS", "masp = ?", new String[]{String.valueOf(masp)});
+        return check != -1;
+
     }
 }

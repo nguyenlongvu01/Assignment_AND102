@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="#D0BAB8">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sửa sản phẩm"
+            android:layout_gravity="center"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+
+        <EditText
+            android:id="@+id/edtTenSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên sản phẩm"/>
+
+        <EditText
+            android:id="@+id/edtGiaSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập giá sản phẩm"/>
+
+        <EditText
+            android:id="@+id/edtSoLuongSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập số lượng sản phẩm"/>
+
+        <Button
+            android:id="@+id/btnUpdateSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận"
+            android:layout_gravity="center"
+            android:backgroundTint="#78ACD5"/>
+
+        <Button
+            android:id="@+id/btnQuayLai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quay lại"
+            android:layout_gravity="center"
+            android:backgroundTint="#E95959"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

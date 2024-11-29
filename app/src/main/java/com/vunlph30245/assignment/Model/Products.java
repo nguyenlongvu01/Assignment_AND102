@@ -5,13 +5,32 @@ public class Products {
     private String tensp;
     private int gia;
     private int soluong;
+    private String img;
 
-    public Products(int masp, String tensp, int gia, int soluong) {
+
+    public Products(int masp, String tensp, int gia, int soluong, String string) {
         this.masp = masp;
         this.tensp = tensp;
         this.gia = gia;
         this.soluong = soluong;
+        this.img = img;
     }
+
+
+    public Products(String tensp, int gia, int soluong, String img) {
+        this.tensp = tensp;
+        this.gia = gia;
+        this.soluong = soluong;
+        this.img = img;
+    }
+
+
+    public Products(String tensp, int gia, int soluong) {
+        this.tensp = tensp;
+        this.gia = gia;
+        this.soluong = soluong;
+    }
+
 
     public int getMasp() {
         return masp;
@@ -43,5 +62,13 @@ public class Products {
 
     public void setSoluong(int soluong) {
         this.soluong = soluong;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

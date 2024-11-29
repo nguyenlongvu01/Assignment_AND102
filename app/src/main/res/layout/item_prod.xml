@@ -13,11 +13,12 @@
         android:padding="10dp">
 
         <ImageView
+            android:id="@+id/ivImgProd"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/ic_banh_quy" />
+            android:src="@drawable/ic_image"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,9 +29,9 @@
                 android:id="@+id/txtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Banh quy"
+                android:text="Bánh Oreo"
                 android:textColor="#F44336"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -49,7 +50,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="SL: 2" />
+                    android:text="Số lượng: 2" />
 
             </LinearLayout>
 
